@@ -46,9 +46,9 @@ script:
   - cd $PROJECT_PATH/examples/tcp
   - make defconfig
   - make -j4
-  # Master build with latest IDF
+  # Master (v3.3) build with latest (stable == v3.3 for now) IDF
   - cd $IDF_PATH
-  - git checkout master && git submodule update --init --recursive
+  - git checkout release/v3.3 && git submodule update --init --recursive
   - cd $IDF_PATH/components/mqtt/esp-mqtt
   - git remote add local $PROJECT_PATH/.git
   - git fetch local

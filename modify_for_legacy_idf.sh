@@ -7,7 +7,7 @@ mkdir -p ${esp_mqtt_path}/examples
 pushd
 cd $IDF_PATH
 former_commit_id=`git rev-parse HEAD`
-git checkout master
+git checkout release/v3.3
 
 for example in tcp; do
     cp -r $IDF_PATH/examples/protocols/mqtt/${example} ${esp_mqtt_path}/examples
